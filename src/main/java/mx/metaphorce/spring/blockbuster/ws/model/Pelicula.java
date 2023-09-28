@@ -1,0 +1,18 @@
+package mx.metaphorce.spring.blockbuster.ws.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+public class Pelicula {
+    private int id;
+    private String titulo;
+    private String idioma;
+}
