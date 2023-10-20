@@ -14,12 +14,12 @@ public class ActoresRepository {
     JdbcTemplate jdbc;
     
     public List<Actor> getAll(){
-        String sqlQuery = "SELECT * FROM blockbuster.actor";
+        String sqlQuery = "SELECT * FROM blockbuster.actores";
         List<Map<String, Object>> resDB = jdbc.queryForList(sqlQuery);
         List<Actor> actores = new ArrayList<>();
         for(Map<String, Object> res : resDB){
             Actor actor = new Actor();
-            actor.setId(Integer.parseInt(res.get("idactor").toString()));
+            actor.setId(Integer.parseInt(res.get("id").toString()));
             actor.setNombre(res.get("nombre").toString());
             actores.add(actor);
         }
